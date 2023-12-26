@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="style.css">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<form action="/" method="get">
+    <button>Вернуться на главную страницу</button>
+    <br/>
+</form>
+<h3>Эти действия помогут вам в легкой проверке работоспособности базы</h3>
+<div class="box">
+
+    <form action="/car/helpService" method="post">
+        <input type="submit" value="Добавить 5 случайных машин" name="button">
+        <input type="submit" value="Удалить все машины" name="button">
+        <input type="submit" value="Вывести все логи" name="button">
+        <input type="submit" value="Удалить логи" name="button">
+        <input type="submit" value="Статистика по базе" name="button">
+    </form>
+</div>
+<div>
+    <ul th:each="res : ${result}">
+        <li th:text="${res}"></li>
+    </ul>
+</div>
+</body>
+</html>

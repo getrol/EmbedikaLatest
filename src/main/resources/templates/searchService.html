@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="style.css">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<form action="/" method="get">
+    <button>Вернуться на главную страницу</button>
+    <br/>
+</form>
+<h3>Найти машины в справочнике</h3>
+<div class="box">
+    <form action="/car/search" method="post">
+        Идентификационный номер: <label> <br/>
+        <input type="text" name="carNumber" placeholder="A111AA11"/>
+    </label> <br/>
+        Модель машины: <label> <br/>
+        <input type="text" name="carModel" placeholder="Porch"/>
+    </label> <br/>
+        Цвет машины: <label> <br/>
+        <input type="text" name="carColor" placeholder="Green"/>
+    </label> <br/>
+        Год машины: <label> <br/>
+        <input type="text" name="carYear" placeholder="1567"/>
+    </label> <br/> <br/>
+        <input type="submit" value="Найти 'И'" name="button">
+        <input type="submit" value="Найти 'ИЛИ'" name="button">
+        <input type="submit" value="Вывести всю базу" name="button">
+    </form>
+</div>
+<div>
+    <ul th:each="res : ${result}">
+        <li th:text="${res}"></li>
+    </ul>
+</div>
+</body>
+</html>

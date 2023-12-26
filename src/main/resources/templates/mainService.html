@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="style.css">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h3>Что вы хотите сделать?</h3>
+<div class="box">
+
+    <form action="/car/addService" method="get">
+        <button>Добавить в справочник</button>
+        <br/>
+    </form>
+    <form action="/car/searchService" method="get">
+        <button>Искать в справочнике</button>
+        <br/>
+    </form>
+    <form action="/car/deleteService" method="get">
+        <button>Удалить из справочника</button>
+        <br/>
+    </form>
+    <form action="/car/helpService" method="get">
+        <button>Вспомогательное (для админа)</button>
+        <br/>
+    </form>
+</div>
+</body>
+</html>
